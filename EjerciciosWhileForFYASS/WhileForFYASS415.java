@@ -1,3 +1,5 @@
+package EjerciciosWhileForFYASS;
+
 import java.util.Scanner;
 /**
  * WhileForFYASS415
