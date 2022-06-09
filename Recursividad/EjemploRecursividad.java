@@ -5,6 +5,8 @@ package Recursividad;
  */
 public class EjemploRecursividad {
 
+
+    
     public static int factorialR(int n) {
         if (n>1) {
            return factorialR(n-1)*n;
