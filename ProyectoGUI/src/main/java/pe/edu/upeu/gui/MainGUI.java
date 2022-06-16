@@ -1,7 +1,6 @@
 package pe.edu.upeu.gui;
 
 import javax.swing.JFrame;
-import javax.swing.JFrame;
 import pe.edu.upeu.util.UtilsX;
 import java.awt.event.*;
 import javax.swing.*;

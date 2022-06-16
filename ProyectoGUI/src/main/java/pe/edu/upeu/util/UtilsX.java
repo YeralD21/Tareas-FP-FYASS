@@ -4,7 +4,7 @@ package pe.edu.upeu.util;
  * UtilX
  */
 import java.net.URL;
-import javax.swing.table.DefaultTableModel;
+
 import javax.swing.table.TableModel;
 public class UtilsX {
 public int fibonaciRecur(final int numero) {
