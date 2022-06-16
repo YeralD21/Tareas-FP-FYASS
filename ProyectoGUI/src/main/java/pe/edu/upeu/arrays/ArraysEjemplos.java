@@ -19,15 +19,17 @@ public class ArraysEjemplos {
     public void vectorObjeto() {
         Persona[] p=new Persona[4];
         p[0]=new Persona("202212461","Fabrizio Sanchez",false);
-        p[1]=new Persona("2022","Fabrizio",false);
+        p[1]=new Persona("202212222","Fabrizio",false);
         System.out.println(p[0].nombres);
         
     }
 
     public void registroAsistencia() {
         Persona[] p={
-            new Persona("20221246","Fabrizio",false),
-            new Persona("2022126","Yerald",false),       
+            new Persona("202212429", "AJAHUANA MAMANI EDILSON ELVIS", false),
+            new Persona("202212464", "APAZA QUISPE JHOEL HAIRTON", false),
+            new Persona("202211726", "AQUINO AMACHI KENNY", false),
+            new Persona("202212444", "ARCE APAZA BISLEYN", false),      
             };
             Scanner cs=new Scanner(System.in);
         for (int i = 0; i < p.length; i++) {
