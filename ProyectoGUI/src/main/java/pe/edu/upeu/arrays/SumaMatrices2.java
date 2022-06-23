@@ -1,6 +1,7 @@
 package pe.edu.upeu.arrays;
 
 public class SumaMatrices2 {
+    //Hecho Por el profesor 
 
     public void sumaMatrices() {
         int[][] mA={{3,-8},{5,9}};
