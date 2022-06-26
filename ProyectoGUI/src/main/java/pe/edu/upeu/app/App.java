@@ -10,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        new MenuOpciones().login();
-        //new MainGUI();
+        //new MenuOpciones().login();
+        new MainGUI();
     }
 }
