@@ -59,11 +59,7 @@ public class ResolucionExamen {
         System.out.println("Total a pagar de todos los Autos con impuesto es : "+(precioVC1+precioVC3+precioVC3+totalImpV));
     }
 
-    
-    
-
-
-public void x_arterisco () {
+    public void x_arterisco () {
     
             
   Scanner lt=new Scanner(System.in);
@@ -87,27 +83,31 @@ public void x_arterisco () {
     System.out.println("ERROR¡ Poner un Numero mayor a 3 e Impar");
   }
 }     
-public void n_numeros_perfectos() {
-  int f, c;
-  int suma;
-  System.out.println("Primeros Numeros Perfectos: ");
 
-  for(f=1;f <= 10000;f++){      
+    public void n_numeros_perfectos() {
+  int i, j;
+  int suma;
+
+  System.out.println("Primeros Numeros Perfectos: "); 
+
+  for(i = 1;i <= 10000; i++){    
+      i++;
+
       suma = 0;
-      for(c = 1;c < f;c++){                          
-           if(f % c==0){
-              suma = suma + c; 
+
+      for(j = 1;j < i;j++){                          
+           if(i % j==0){
+              suma = suma + j; 
            }
       }
-    if(f == suma){                          
-       System.out.println(f);
+    if(i == suma){                          
+       System.out.println(i);
        
     }
   }
 }
 
-    
-public void decimal_a_binario() {
+    public void decimal_a_binario() {
 
   Scanner lt= new Scanner(System.in);
   int n;
@@ -121,7 +121,7 @@ public void decimal_a_binario() {
   System.out.println();
 }
 
-public static void decBin(int n) {
+        public static void decBin(int n) {
   if (n < 2) {
       System.out.print(n);
       return;
@@ -131,6 +131,5 @@ public static void decBin(int n) {
       return;
   }
 }
-    
-  
-}
+}  
+   
