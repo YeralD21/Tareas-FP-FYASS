@@ -22,24 +22,9 @@ public class TransformadasMatriz {
         
     }
     
-    
-    public void transformada11() {
-        System.out.println("Ingrese Dimension Matriz:");
-        int dimension=cs.nextInt();
-        System.out.println("Ingrese valor de Inicio:");
-        int valorInit=cs.nextInt();  
-        String[][] matriz=new String[dimension][dimension];
-        
-        for (int fila = 0; fila < matriz.length; fila++) {
-            for (int columna = matriz[0].length-1-fila; columna>= 0; columna--) {
-                matriz[fila][columna]=""+valorInit;
-                valorInit++;
-            }
-        }
-        imprimirMatrices(matriz);
-    }
 
     //TAREAAAAAA¡¡¡¡
+
     public void transformada06() {
         System.out.println("Ingrese dimesion de Matriz:");
         int dimension = cs.nextInt();
@@ -48,7 +33,7 @@ public class TransformadasMatriz {
         String[][] matriz = new String[dimension][dimension];
         for (int f = 0; f < matriz.length; f++) {
             for (int c = 0; c <= f; c++) {
-                matriz[f][c] = String.valueOf(valor);
+                matriz[f][c] = "" + valor;
                 valor++;
             }
         }
@@ -64,7 +49,7 @@ public class TransformadasMatriz {
         matriz = new String[dimension][dimension];  
         for (int f = 0; f < matriz.length; f++) {
             for (int c = 0; c <= (matriz.length - 1) - f; c++) {
-                matriz[f][c] = String.valueOf(valor);
+                matriz[f][c] = "" + valor;
                 valor++;
             }
         }
@@ -80,7 +65,7 @@ public class TransformadasMatriz {
         matriz = new String[dimension][dimension];
         for (int f = 0; f < matriz.length; f++) {
             for (int c = f; c < matriz[f].length; c++) {
-                matriz[f][c] = String.valueOf(valor); 
+                matriz[f][c] = "" + valor;
                 valor++;        
             }          
         }
@@ -95,7 +80,7 @@ public class TransformadasMatriz {
         String[][] matriz = new String[dimension][dimension];
         for (int f = 0; f < matriz.length; f++) {
             for (int c = (matriz[0].length - 1) - f; c <= matriz[0].length - 1; c++) {
-                matriz[f][c] = String.valueOf(valor);
+                matriz[f][c] = "" + valor;
                 valor++;
             }
         }
@@ -111,11 +96,40 @@ public class TransformadasMatriz {
         matriz = new String[dimension][dimension];
         for (int c = 0; c < matriz.length; c++) {
             for (int f = 0; f <= (matriz.length - 1) - c; f++) {
-                matriz[f][c] = String.valueOf(valor);
+                matriz[f][c] = "" + valor;
                 valor++;
             }
         }
         imprimirMatrices(matriz);
+    }
+
+    public void transformada14() {
+        String[][] matriz;
+        System.out.println("Ingrese dimesion de Matriz:");
+        int dimension = cs.nextInt();
+        System.out.println("Ingrese valor inicial:");
+        int valor = cs.nextInt(); 
+        matriz = new String[dimension][dimension];
+        for (int c = 0; c < matriz.length; c++) { 
+            for (int f = 0; f <= c ; f++){
+           
+            matriz[f][c] = "" + valor;
+            valor++;    
+            }  
+    }
+    imprimirMatrices(matriz);
+    }
+
+
+    public static String[][] transformada144(int dimen, int numinit) {
+        String[][] matrizR=new String[dimen][dimen];
+        for (int i = 0; i < matrizR.length; i++) {
+            for (int j = 0; j<=i ; j++) {        
+                    matrizR[j][i]=""+numinit;
+                    numinit++;      
+            }
+        }
+        return matrizR;
     }
 
     public void transformada20() {
@@ -127,12 +141,15 @@ public class TransformadasMatriz {
         matriz = new String[dimension][dimension];
         for (int f = (matriz[0].length - 1); f >= 0; f--) {
             for (int c = matriz[f].length-1; c >= f; c--) {
-                matriz[c][f] = String.valueOf(valor); 
+                matriz[c][f] = "" + valor;
                 valor++;        
             }          
         }
         imprimirMatrices(matriz);
     }
+
+
+     //Transformadas Completas 
 
     public void transformada21() {
         String[][] matriz;
@@ -144,13 +161,12 @@ public class TransformadasMatriz {
         for (int c = 0; c < matriz.length; c++) {
             if (c % 2 == 0) {
                 for (int f = 0; f < matriz.length; f++) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int f = matriz.length - 1; f >= 0; f--) {
-                    matriz[f][c] = String.valueOf(valor);
-                    valor++;
+                    matriz[f][c] = "" + valor;
                 }
             }
 
@@ -158,7 +174,6 @@ public class TransformadasMatriz {
         imprimirMatrices(matriz);
     }
 
-    //Transformadas Completas
     public void transformada22() {
         String[][] matriz;
         System.out.println("Ingrese dimesion de Matriz:");
@@ -171,12 +186,12 @@ public class TransformadasMatriz {
         for (int c = 0; c < matriz[0].length; c++) {
             if (c % 2 == 0) {
                 for (int f = matriz.length - 1; f >= 0; f--) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int f = 0; f < matriz.length; f ++   ) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             }
@@ -195,12 +210,12 @@ public class TransformadasMatriz {
         for (int c = matriz.length - 1; c >= 0; c--) {
             if (c % 2 == 0) {
                 for (int f = 0; f < matriz.length; f++) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int f = matriz.length - 1; f >= 0; f--) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             }
@@ -219,12 +234,12 @@ public class TransformadasMatriz {
         for (int c = matriz.length - 1; c >= 0; c--) {
             if (c % 2 == 0) {
                 for (int f = matriz.length - 1; f >= 0; f--) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int f = 0; f < matriz.length; f++) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             }
@@ -243,12 +258,12 @@ public class TransformadasMatriz {
         for (int f = 0; f < matriz.length; f++) {
             if (f % 2 == 0) {
                 for (int c = 0; c < matriz.length; c++) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int c = matriz.length - 1; c >= 0; c--) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             }
@@ -267,12 +282,12 @@ public class TransformadasMatriz {
         for (int f = 0; f < matriz.length; f++) {
             if (f % 2 == 0) {
                 for (int c = matriz.length - 1; c >= 0; c--) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             } else {
                 for (int c = 0; c < matriz.length; c++) {
-                    matriz[f][c] = String.valueOf(valor);
+                    matriz[f][c] = "" + valor;
                     valor++;
                 }
             }
@@ -568,6 +583,6 @@ public class TransformadasMatriz {
     public static void main(String[] args) {
         //new TransformadasMatriz().transformada01();
         //new TransformadasMatriz().Transformada12();
-        new TransformadasMatriz().transformada11();
+        new TransformadasMatriz().transformada14();
     }
 }
