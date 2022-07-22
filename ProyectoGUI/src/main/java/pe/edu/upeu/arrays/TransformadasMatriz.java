@@ -121,17 +121,6 @@ public class TransformadasMatriz {
     }
 
 
-    public static String[][] transformada144(int dimen, int numinit) {
-        String[][] matrizR=new String[dimen][dimen];
-        for (int i = 0; i < matrizR.length; i++) {
-            for (int j = 0; j<=i ; j++) {        
-                    matrizR[j][i]=""+numinit;
-                    numinit++;      
-            }
-        }
-        return matrizR;
-    }
-
     public void transformada20() {
         String[][] matriz;
         System.out.println("Ingrese dimesion de Matriz:");
@@ -309,7 +298,7 @@ public class TransformadasMatriz {
                     valor++;
                 }
             } else {
-                for (int c = 0; c <= matriz.length-1; c++) {
+                for (int c = 0; c < matriz.length; c++) {
                     matriz[f][c] = "" + valor;
                     valor++;
                 }
@@ -364,6 +353,7 @@ public class TransformadasMatriz {
             }
             for (int liz = matriz.length - 1 - v; liz > v; liz--) {
                 matriz[liz][v] = ""+valor;
+                valor++;
             }
             for (int ls = v; ls < matriz.length - 1 - v; ls++) {
                 matriz[v][ls] = ""+valor;
@@ -375,7 +365,7 @@ public class TransformadasMatriz {
             }
         }
         if (dimension % 2 != 0) {
-            matriz[dimension / 2][dimension / 2] = String.valueOf(valor);
+            matriz[dimension / 2][dimension / 2] = ""+valor;
         }
         imprimirMatrices(matriz);
     }
@@ -411,6 +401,7 @@ public class TransformadasMatriz {
         imprimirMatrices(matriz);
     }
 
+//  Sentido antihorario 
     public void transformada33() {
         String[][] matriz;
         System.out.println("Ingrese dimesion de Matriz:");
@@ -451,7 +442,9 @@ public class TransformadasMatriz {
         System.out.println("Ingrese valor inicial:");
         int valor = cs.nextInt();
         matriz = new String[dimension][dimension];
+
         for (int v = matriz.length - 1; v >= matriz.length / 2; v--) {
+            
             for (int liz = (dimension - 1) - v; liz < v; liz++) {
                 matriz[liz][(dimension - 1) - v] = ""+valor;
                 valor++;
@@ -506,9 +499,47 @@ public class TransformadasMatriz {
         imprimirMatrices(matriz);
     }
 
+    //No recuerdo si usted hizo esto en Clase Ingeniero - Pero igual lo hice para practicar mas <3 :,D 
+
+    public void transformada35() {
+        String[][] matriz;
+        System.out.println("Ingrese dimesion de Matriz:");
+        int dimension = cs.nextInt();
+        System.out.println("Ingrese valor inicial:");
+        int valor = cs.nextInt();
+        matriz = new String[dimension][dimension];
+
+        for (int v = matriz.length - 1; v >= matriz.length / 2; v--) {
+
+            for (int lin = (matriz.length - 1) - v; lin < v; lin++) {
+                matriz[v][lin] = ""+valor;
+                valor++;
+            }
+            for (int ld = v; ld > (matriz.length - 1) - v; ld--) {
+                matriz[ld][v] = ""+valor;
+                valor++;
+            }
+            for (int ls =  v; ls > (matriz.length - 1) - v; ls--) {
+                matriz[(matriz.length - 1) - v][ls] = ""+valor;
+                valor++;
+            }
+            for (int liz = (matriz.length - 1) - v; liz < v; liz++) {
+                matriz[liz][(matriz.length - 1) - v] = ""+valor;
+                valor++;
+            }
+        }
+        if (dimension % 2 != 0) {
+            matriz[dimension / 2][dimension / 2] = String.valueOf(valor);
+        }
+        imprimirMatrices(matriz);
+    }
+
+
+
+
     //INTENTOS FALLIDOS - AQUI NO ME SALIÓ COMO PENSABA EN UN PRINCIPIO :(
 
-   /*  public void transformada366() {
+   /*  public void transformada36() {
         String[][] matriz;
         System.out.println("Ingrese dimesion de Matriz:");
         int dimension = cs.nextInt();
@@ -542,47 +573,15 @@ public class TransformadasMatriz {
         if (dimension % 2 != 0) {
             matriz[dimension / 2][dimension / 2] = String.valueOf(valor);
         }
-        imprimirMatrices(matriz);
+        imprimirMatrices(matriz); sd
     }*/
     
-    public void transformada344() {
-        String[][] matriz;
-        System.out.println("Ingrese dimesion de Matriz:");
-        int dimension = cs.nextInt();
-        System.out.println("Ingrese valor inicial:");
-        int valor = cs.nextInt();
-        matriz = new String[dimension][dimension];
-        for (int v = matriz.length - 1; v >= matriz.length / 2; v--) {
-        
-            for (int liz = matriz.length-1-v; liz < v; liz++) {
-                matriz[liz][matriz.length-1-v]=""+valor;
-                valor++;
-            }
-            for (int lin = matriz.length-1-v; lin < v; lin++) {
-                matriz[v][lin]=""+valor;
-                valor++;
-            }
-            for (int ld = v; ld > matriz.length-1-v; ld--) {
-                matriz[ld][v]=""+valor;
-                valor++;
-            }
-            for (int ls = v; ls > matriz.length-1-v; ls--) {
-                matriz[matriz.length-1-v][ls]=""+valor;
-                valor++;
-            }
-            
-
-        }
-        if (dimension % 2 != 0) {
-            matriz[dimension / 2][dimension / 2] = ""+valor;
-        }
-        imprimirMatrices(matriz);
-    }
+    
 
    
     public static void main(String[] args) {
         //new TransformadasMatriz().transformada01();
         //new TransformadasMatriz().Transformada12();
-        new TransformadasMatriz().transformada14();
+        new TransformadasMatriz().transformada35();
     }
 }
